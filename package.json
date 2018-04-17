@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/Metallicbai/server#readme",
   "dependencies": {
-    "koa": "^2.4.1"
+    "ejs": "^2.5.8",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.4"
   }
 }
