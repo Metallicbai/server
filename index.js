@@ -5,7 +5,7 @@ const path = require('path');
 const app = new koa();
 const static = require('koa-static');
 const bodyParser = require('koa-bodyparser');
-const router = require('./controller/router');
+const router = require('./routers');
 const views = require('koa-views');
 
 // 设置静态服务
