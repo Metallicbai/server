@@ -1,26 +1,15 @@
-const mongoose = require('./db');
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose');
 
 
-class Database {
-    // 创建 Schema
-    createSchema(options = {}) {
-        return new Schema(options);
-    }
+mongoose.connect('mongodb://localhost/blog');
 
-    // 获取 model 模型
-    getModel(name = '',schema) {
-        if(!name) {
-            throw ('model name is required');
-        }
+const db = mongoose.connection;
 
-        if(schema) {
-            return mongoose.model(name,schema);
-        } else {
-            return mongoose.model(name);
-        }
 
-    }
-}
+db.on('error', console.error.bind(console, 'connection error:'));
 
-module.exports = Database;
+db.on('open',cb => {
+    console.log('连接成功')
+})
+
+module.exports = mongoose;
