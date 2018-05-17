@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+const {database} = require('../config/config');
 
-
-mongoose.connect('mongodb://localhost/blog');
+mongoose.connect(`mongodb://${database.host}/${database.database}`);
 
 const db = mongoose.connection;
 
