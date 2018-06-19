@@ -3,6 +3,7 @@ module.exports = {
 
         let codeMessage = {
             0: 'success',
+            500: '服务端错误',
             4001: '缺少必要参数'
         }
 
