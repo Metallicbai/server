@@ -9,7 +9,7 @@ const router = require('./routers');
 const views = require('koa-views');
 
 // 启动 model
-require('./models')
+require('./models');
 
 // 设置静态服务
 app.use(static(path.join(__dirname,'./static'),{
